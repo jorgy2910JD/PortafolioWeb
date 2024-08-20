@@ -1,0 +1,660 @@
+
+* {
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+  margin: 0;
+  padding: 0; 
+}
+
+html {
+    /* es para deslizar cuando hago click en los links del menú */
+    scroll-behavior: smooth;
+}
+
+/* MENU */ 
+.contenedor-header {
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.logo a{
+    font-family:fantasy;
+    font-size: 36px;
+    color: rgb(0, 0, 255);
+    text-decoration:none;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+
+.contenedor-header nav ul li a:hover {
+    color:blue;
+}
+
+.nav-responsive {
+    background-color: blue;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+/* Seccion inicio */
+
+.inicio {
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),
+    url(Storage/hombre\ programando.png);
+    background-size:cover;
+    height: 120vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.inicio .contenido-banner{
+    padding: 20px;
+    background-color: #1e2326;
+    max-width: 350px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+
+.inicio .contenido-banner img{
+    margin-top: 40px;
+    border: 10px solid #fff;
+    display: block;
+    width: 100%;
+    margin: auto;
+    border-radius: 100%;
+}
+
+.inicio .contenido-banner h1{
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff ;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.inicio .contenido-banner .redes a:hover {
+    background-color: blue;
+}
+
+/* Seccion Sobre Mi */
+.sobremi {
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.sobremi .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2 {
+    font-size: 48px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: blue;
+}
+.sobremi .contenido-seccion p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+color: blue;
+font-weight: bold;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col{
+    width: 50%;
+}
+.sobremi .fila .col h3 {
+    font-size:28px ;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;  
+}
+
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: blue;
+    width: 130px;
+}
+
+.sobremi .fila .col .contenedor-intereses{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereses .interes{
+    width: 100px;
+    height: 100px;
+    background-color: #252a2e;
+    border-radius: 10px;
+    margin: 0 15px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.sobremi .fila .col .contenedor-intereses .interes:hover {
+ background-color: blue;   
+}
+.sobremi .fila .col .contenedor-intereses .interes .interes i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 1; /* Z-index ajustado */
+    overflow: hidden; /* Importante para que el overlay no se desborde */
+}
+
+.sobremi button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0; /* Inicialmente 0 para que la animación sea visible */
+    height: 100%;
+    background-color: blue;
+    z-index: -1; /* Detrás del texto */
+    transition: width 1s ease; /* Transición suave */
+}
+
+.sobremi button:hover .overlay {
+    width: 100%; /* Se expande al hacer hover */
+}
+
+
+/* Seccion Skills */
+.skills {
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50 px 20px;
+}
+
+.skills .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.skills h2 {
+    font-size: 48px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: blue;
+}
+
+.skills .fila{
+    display: flex;
+}
+.skills .fila .col{
+   width: 50%;
+   padding: 0 20px; 
+}
+.skills .fila .col h3{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+    color: rgb(71, 71, 243);
+}
+.skills .skill > span{
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+}
+.skills .skill .barra-skill{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+.skills .skill .progreso {
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+} 
+.skills .skill .barra-skill span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: blue;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+.skills .skill .python{
+    width: 0%;
+    animation: 2s python forwards;
+}
+@keyframes python {
+    0%{width: 0%;}
+    100% {width: 80%;}
+}
+
+.skills .skill .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100% {width: 90%;}
+}
+.skills .skill .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript {
+    0%{width: 0%;}
+    100% {width: 75%;}
+}
+.skills .skill .mysql{
+    width: 0%;
+    animation: 2s mysql forwards;
+}
+@keyframes mysql {
+    0%{width: 0%;}
+    100% {width: 90%;}
+}
+.skills .skill .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+@keyframes java {
+    0%{width: 0%;}
+    100% {width: 85%;}
+}
+.skills .skill .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0%{width: 0%;}
+    100% {width: 95%;}
+}
+.skills .skill .trabajoequipo{
+    width: 0%;
+    animation: 2s trabajoequipo forwards;
+}
+@keyframes trabajoequipo {
+    0%{width: 0%;}
+    100% {width: 95%;}
+}
+.skills .skill .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad {
+    0%{width: 0%;}
+    100% {width: 80%;}
+}
+.skills .skill .liderazgo{
+    width: 0%;
+    animation: 2s liderazgo forwards;
+}
+@keyframes liderazgo {
+    0%{width: 0%;}
+    100% {width: 75%;}
+}
+/*Seccion Mision y Vision */
+.mision-vision{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.mision-vision .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.mision-vision h2{
+    font-size: 48px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: blue;
+}
+.mision-vision .fila {
+    display:flex;
+}
+.mision-vision .fila .col{
+    width: 50%;
+   padding: 0 20px
+}
+.mision-vision .fila .col h3{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+    color: rgb(71, 71, 243);
+}
+
+.mision-vision .fila .col p{
+    font-weight: bold;
+    font-style: italic;
+    text-align: justify;
+}
+
+/* Seccion de Certificaciones */
+.certificaciones{
+    background-color: #1E2326;
+    color: #fff;
+    padding: 50 px 20px;
+}
+
+.certificaciones .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+}
+.certificaciones h2 {
+    font-size: 48px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: blue;
+}
+
+.certificaciones .fila{
+    display: flex;
+    justify-content: space-between;
+}
+.certificaciones .fila .col{
+    width: 49%;
+    padding: 0 20px;
+}
+.certificaciones .fila .col h3 {
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-bottom: 25px;
+    color: rgb(71, 71, 243);
+}
+.certificaciones .fila .izquierda{
+    border-right: 2px solid #252a2e;
+}
+.certificaciones .fila .derecha {
+    border-left: 2px solid #252a2e;
+}
+.certificaciones .fila .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #252a2e;
+    position: relative;
+}
+.certificaciones .fila .item h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.certificaciones .fila .item .casa{
+    color: blue;
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+}
+.certificaciones .fila .item .fecha {
+    display: block;
+    color: rgb(71, 71, 243);
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.certificaciones .fila .item p{
+    line-height: 24px;
+    text-align: justify;
+}
+.certificaciones .fila .izq{
+    border-right: 2px solid blue;
+    margin-right: 20px;
+}
+.certificaciones .fila .der{
+    border-left: 2px solid blue;
+    margin-left: 20px;
+}
+.certificaciones .fila .item .conectori{
+    height: 2px;
+    background-color: blue;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    right: -47px;
+    z-index: 5;
+}
+.certificaciones .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    float: right;
+    position: relative;
+    bottom: 4px;
+}
+.certificaciones .fila .item .conectord{
+    height: 2px;
+    background-color: blue;
+    width: 47px;
+    position: absolute;
+    top: 50%;
+    left: -47px;
+    z-index: 5;
+}
+.certificaciones .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: blue;
+    float: left;
+    position: relative;
+    bottom: 4px;
+}
+/* Seccion de contacto */
+.contacto{
+    background-image: url(Storage/contact_bg.png);
+    background-color: #1E2326;
+    color: #fff;
+    padding: 50px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2 {
+    font-size: 48px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: blue; 
+}
+.contacto .fila{
+    display: flex;
+}
+.contacto .col{
+    width: 50%;
+    padding:10px;
+    position: relative;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252a2e;
+    color: #fff;
+    font-size: 18px;
+}
+.contacto button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 1; /* Ajustado */
+    overflow: hidden; /* Importante para que el overlay no se desborde */
+}
+
+.contacto button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: blue;
+    z-index: -1;
+    transition: width 1s ease; /* Suaviza la animación */
+}
+
+.contacto button:hover .overlay {
+    width: 100%;
+}
+
+.contacto .col img{
+    width: 100%;
+
+}
+.contacto .col .info {
+    position: absolute;
+    top: 30%;
+    background-color: #252a2e;
+    padding: 20px;
+    max-width: 350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contacto .col .info ul {
+    list-style: none;
+}
+
+.contacto .col .info ul li {
+    margin-bottom: 20px;
+}
+
+.contacto .col .info ul li i {
+    color: blue;
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+/* Responsive*/ 
+@media screen and (max-width:980px) {
+    nav {
+        display: none;
+    }
+    .nav-responsive { /* Corregido con punto delante */
+        display: block;
+    }
+    nav.responsive {
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252a2e;
+        width: 180px;
+    }
+    nav.responsive ul { /* Corregido error tipográfico */
+        display: block !important; /* Corregido el uso de la coma */
+    }
+    nav.responsive ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
+}
+
+
+@media screen and (max-width:700px){
+    .sobremi .fila{
+        display: block;
+    }
+    .sobremi .fila .col{
+        width: fit-content;
+    }
+    .skills .fila{
+        display: block;
+    }
+    .skills .fila .col{
+        width: 100%;
+    }
+    .skills .fila .col .barra-skill{
+        width: 100%;
+    }
+    .certificaciones .fila{
+        display: block;
+    }
+    .certificaciones .fila .derecha{
+        margin-left: 20px;
+    }
+    .contacto .fila{
+        display: block;
+    }
+    .contacto .fila .col{
+        width: 100%;
+    }
+
+}

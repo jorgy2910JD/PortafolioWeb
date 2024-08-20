@@ -5,15 +5,313 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jorge Mozo - Portafolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="Storage/Logo-icono.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <!----- Encabezado-------->
     <div class="contenedor-header">
         <header>
             <div class="logo">
-                
+               <a href="#">Jorge Mozo</a> 
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="#inicio" onclick="seleccionar()">Inicio</a></li>
+                    <li><a href="#sobremi"onclick="seleccionar()">Acerca de mi</a></li>
+                    <li><a href="#skills"onclick="seleccionar()">Skills</a></li>
+                    <li><a href="#mision-vision" onclick="seleccionar()">Mision-Vision</a></li>
+                    <li><a href="#certificaciones" onclick="seleccionar()">Certificaciones</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </header>
     </div>
+    <!-- Seccion inicio -->
+     <section id="inicio" class="inicio">
+        <div class="contenido-banner">
+            <div class="contenedor-img">
+                <img src="Storage/jogy elegante.jpg" alt="">
+            </div>
+            <h1>Jorge Mozo</h1>
+            <h2>Jr Development Backend</h2>
+            <div class="redes">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+     </section>
+
+     <!-- Seccion Acerca de mi -->
+     <section id="sobremi" class="sobremi">
+        <div class="contenido-seccion">
+            <h2>Acerca de mi</h2>
+            <p><span>¡Hola!, Soy Jorge Luis Mozo Castro</span> Desarrollador Visionado a querer dejar huella en el mundo  con una mente innovadora, 
+                cuento con experiencia en programación backend y frontend, las cuales me han permitido realizar distintos proyectos, 
+                al igual que poseo aprendizaje en lenguajes como JavaScript, Java, SQL y desarrollo Web como HTML y CSS, 
+                me apasiona la programación porque en ella veo el futuro tecnológico y mundial, en el cual quiero ser participe, y mi gran objetivo es ser un gran empresario e influenciador de la tecnología.</p>
+            <div class="fila">
+                <!--Datos personales -->
+                <div class="col">
+                    <h3>Datos Personales</h3>
+                    <ul>
+                        <li>
+                            <strong>Cumpleaños</strong>
+                            29-08-2006
+                        </li>
+                        <li>
+                            <strong>Teléfono</strong>
+                            +57 305 229 5557
+                        </li>
+                        <li>
+                            <strong>Email</strong>
+                            jorgy29081@gmail.com
+                        </li>
+                    </ul>
+                </div>
+                <!--Intereses-->
+                <div class="col">
+                    <h3>Intereses</h3>
+                    <div class="contenedor-intereses">
+                        <div class="interes">
+                            <i class="fa-solid fa-gamepad"></i>
+                            <span>JUEGOS</span>  
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-headphones"></i>
+                            <span>MUSICA</span> 
+                        </div>
+                        <div class="interes">
+                            <i class="fa-solid fa-plane"></i>
+                            <span>VIAJES</span> 
+                        </div>
+                            <div class="interes">
+                                <i class="fa-solid fa-futbol"></i>
+                                <span>DEPORTES</span> 
+                            </div>
+                            <div class="interes">
+                                <i class="fa-solid fa-car"></i>
+                                <span>AUTOS</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button>
+                    Download CV <i class="fa-solid fa-download"></i>
+                    <span class="overlay"></span>
+                </button>
+            </div>
+        </div>
+     </section>
+
+     <!-- Seccion Skills-->
+      <section class="skills" id="skills">
+        <div class="contenido-seccion">
+            <h2>Skills</h2>
+            <div class="fila">
+                <!--Technical Skills-->
+                <div class="col">
+                    <h3>Technical Skills</h3>
+                    <div class="skill">
+                        <span>Python</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>HTML & CSS</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>JavaScript</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>MySQL</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>90%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>JAVA</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Soft Skills-->
+                <div class="col">
+                    <h3>Soft Skills</h3>
+                    <div class="skill">
+                        <span>Comunicación</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Trabajo en Equipo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>95%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Creatividad</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>80%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill">
+                        <span>Liderazgo</span>
+                        <div class="barra-skill">
+                            <div class="progreso">
+                                <span>75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!--Seccion Mision-Vision-->
+      <section id="mision-vision" class="mision-vision">
+        <div class="contenido-seccion">
+            <h2>Misión & Visión</h2>
+                <div class="fila">
+                    <div class="col">
+                        <h3>Misión</h3>
+                        <p>Mi misión es lograr ser un Influenciador de la tecnología, no solo en la programación de software, sino tambien
+                           en la creación de proyectos que dejen una marca en el mundo, poder innovar cada idea que en nuestra mente suenen 
+                           ficticias o imposibles de realizar.</p>
+                    </div>
+                    <div class="col">
+                        <h3>Visión</h3>
+                        <p>Mi visión está basada en objetivos de corto, mediano y largo plazo, iniciando con el principal objetivo que es ser
+                        un ingeniero de Sistemas y tener énfasis en la ciberseguridad, con esto ir desarrollando mi proyecto empresarial, conocer nuevos paises, nuevas culturas,
+                        llevar a mi empresa conocerse no solo nacional sino internacionalmente, también adquirir conocimientos en idiomas como Inglés y Portugués. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </section>
+      <!--Seccion Certificaciones-->
+      <section class="certificaciones" id="certificaciones">
+        <div class="contenido-seccion">
+            <h2>Certificaciones</h2>
+            <div class="fila">
+                <div class="col izquierda">
+                    <h3>Educación</h3>
+                    <div class="item izq">
+                        <h4>Bachillerato académico</h4>
+                        <span class="casa">Colegio Luis Enrique Figueroa Rey</span>
+                        <span class="fecha">2022-2023</span>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Curso de Inglés</h4>
+                        <span class="casa"> Metropolitan English Institue MEI</span>
+                        <span class="fecha">2024</span>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                    <div class="item izq">
+                        <h4>Programación de Software </h4>
+                        <span class="casa">Campuslands S.A.S</span>
+                        <span class="fecha">2024</span>
+                        <div class="conectori">
+                            <div class="circuloi"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col derecha">
+                    <h3>Experiencia laboral</h3>
+                    <div class="item der">
+                        <h4>Backend-Frontend</h4>
+                        <span class="casa">HTML & CSS</span>
+                        <p>El proyecto consiste en el desarrollo de una réplica sobre una propuesta para el panel de gestionamiento de proyectos y sus módulos necesarios para la empresa “Kario Media”
+                        el cual va desde el respectivo login hasta el menú principal que esta conformado por el panel administrativo y sus respectivos módulos.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    <div class="item der">
+                        <h4>Backend</h4>
+                        <span class="casa">SQL</span>
+                        <p> Creación de software que permita manejar los datos e información que se generan sobre los parques naturales gestionados por cada departamento. La información se guardara en diferentes tablas, a las cuales algunos usuarios podran acceder para revisar ó editar.</p>
+                        <div class="conectord">
+                            <div class="circulod"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+      </section>
+      <!--Seccion de Contacto-->
+      <section id="contacto" class="contacto">
+        <div class="contenido-seccion">
+          <h2>Contacto</h2>
+            <div class="fila">
+            <!--Formulario-->
+                <div class="col">
+                    <input type="text" placeholder="Nombre">
+                    <input type="number" placeholder="Número Telefónico">
+                    <input type="email" placeholder="Correo Electrónico">
+                    <input type="text" placeholder="Tema">
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Mensaje"></textarea>
+                        <button>
+                            Enviar Mensaje<i class="fa-solid fa-paper-plane"></i>
+                            <span class="overlay"></span>
+                        </button>
+                </div>
+            <!--Mapa-->
+            <div class="col">
+                <img src="Storage/Ubicacion.png" alt="">
+                <div class="info">
+                    <ul>
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            Campuslands, Torre Zenith piso 6, Zona Franca Santander
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                            Llamame: 305 229 5557
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            Email: jorgy29081@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+      </section>
+      </div>
+      <script src="portafolio.js"></script>
 </body>
 </html>
